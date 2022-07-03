@@ -34,4 +34,13 @@ public class Produto {
     @Column(name = "data_cadastro")
     private LocalDate dataCadastro;
 
+    public Produto(Long id, String nome, String descricao, BigDecimal preco, String sku) {
+        super();
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.sku = sku;
+    }
+
 }
