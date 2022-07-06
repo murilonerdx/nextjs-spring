@@ -1,5 +1,6 @@
 package com.murilonerdx.vendasbackend.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -49,6 +50,7 @@ public class ProdutoController {
 
     @PostMapping
     public ProdutoFormRequest salvar(@RequestBody ProdutoFormRequest produto ) {
+        produto.setDataCadastro(LocalDate.now());
         Produto entidadeProduto = produto.toModel();
         repository.save(entidadeProduto);
         return ProdutoFormRequest.fromModel(entidadeProduto);

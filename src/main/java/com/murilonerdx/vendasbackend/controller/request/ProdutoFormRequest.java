@@ -20,17 +20,17 @@ public class ProdutoFormRequest {
     private String sku;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
-    private LocalDate cadastro;
+    private LocalDate dataCadastro;
 
     public ProdutoFormRequest(Long id, String descricao,
-                              String nome, BigDecimal preco, String sku, LocalDate cadastro) {
+                              String nome, BigDecimal preco, String sku, LocalDate dataCadastro) {
         super();
         this.id = id;
         this.descricao = descricao;
         this.nome = nome;
         this.preco = preco;
         this.sku = sku;
-        this.cadastro = cadastro;
+        this.dataCadastro = dataCadastro;
     }
 
     public Produto toModel() {

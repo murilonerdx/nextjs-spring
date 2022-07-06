@@ -41,6 +41,7 @@ public class Produto {
         this.descricao = descricao;
         this.preco = preco;
         this.sku = sku;
+        this.dataCadastro = LocalDate.now();
     }
 
 }
